@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: yellowgreen;
+    width:100%;
+    height:80px;
+}
+.manuFixed{
+    top:0;
+    left:0;
+    position: fixed;
+    transform: translateY(-100%);
+    animation-name:manuFixed;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+}
+@keyframes manuFixed {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.PreLoder{
+     position:fixed;
+     top:0;
+     left: 0;
+     background-color:white;
+     width:100%;
+     height:100%;
+     
+
+}
+
+.preLoderContant{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preLoderContant span{
+    background-color: red;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    margin-right: 15px;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+}
+
+.preLoderContant span:nth-child(1){
+    background-color: #F62107;
+   
+}
+.preLoderContant span:nth-child(2){
+    background-color: #E4F607;
+    animation-delay: 0.25s;
+}
+.preLoderContant span:nth-child(3){
+    background-color: #07EBF6;
+    animation-delay: 0.5s;
+}
+
+.preLoderContant span:nth-child(4){
+    background-color: #0BF607 ;
+    animation-delay: 0.75s;
+}
+
+@keyframes bounce {
+    0%{
+        margin-top: 0px;
+    }
+
+    100%{
+        margin-top: -80px;
+    }
+}
